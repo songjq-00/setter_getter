@@ -43,6 +43,11 @@ public class Pizza {
 
     }
 
+    public void makePizza(){
+        System.out.println("Make pizza with ingredients:" + pizzaIngredients);
+
+
+    }
     
     private void printReceipt(){
         System.out.println("********RECEIPT********");
