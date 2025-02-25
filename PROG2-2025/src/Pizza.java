@@ -1,4 +1,4 @@
-public class SliceOHeaven {
+public class Pizza {
     public String storeName;
     public String storeAddress;
 
@@ -14,6 +14,12 @@ public class SliceOHeaven {
     
     private String orderID;
     private double orderTotal;
+
+    private final String DEF_ORDER_ID = "DEF-SOH-099";
+
+    private final String DEF_PIZZA_INGREDIENTS = "Mozzarella Cheese";
+
+    private final double DEF_ORDER_TOTAL = 15.00;
 
 
     public void takeOrder(String id, double total){
@@ -49,6 +55,15 @@ public class SliceOHeaven {
         System.out.println("Order Total: " + orderTotal);
     }
 
+    public String getpizzaIngredients() {
+        return pizzaIngredients;
+    }
 
-    
+    public String getorderID() {
+        return orderID;
+    }
+
+    public double getorderTotal() {
+        return orderTotal;
+    }
 }
