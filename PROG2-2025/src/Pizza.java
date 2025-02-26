@@ -21,6 +21,12 @@ public class Pizza {
 
     private final double DEF_ORDER_TOTAL = 15.00;
 
+    public Pizza () {
+        this.orderID = DEF_ORDER_ID;
+        this.pizzaIngredients = DEF_PIZZA_INGREDIENTS;
+        this.orderTotal = DEF_ORDER_TOTAL;
+    }
+
 
     public void takeOrder(String id, double total){
         orderID = id;
@@ -59,11 +65,24 @@ public class Pizza {
         return pizzaIngredients;
     }
 
+    public String setpizzaIngredients() {
+        return pizzaIngredients;
+    }
+
+
     public String getorderID() {
         return orderID;
     }
 
+    public String setorderID() {
+        return orderID;
+    }
+
     public double getorderTotal() {
+        return orderTotal;
+    }
+
+    public double setorderTotal() {
         return orderTotal;
     }
 }
