@@ -15,11 +15,11 @@ public class Pizza {
     private String orderID;
     private double orderTotal;
 
-    private final String DEF_ORDER_ID = "DEF-SOH-099";
+    public static final String DEF_ORDER_ID = "DEF-SOH-099";
 
-    private final String DEF_PIZZA_INGREDIENTS = "Mozzarella Cheese";
+    public static final String DEF_PIZZA_INGREDIENTS = "Mozzarella Cheese";
 
-    private final double DEF_ORDER_TOTAL = 15.00;
+    public static final double DEF_ORDER_TOTAL = 15.00;
 
     public Pizza () {
         this.orderID = DEF_ORDER_ID;
@@ -28,9 +28,11 @@ public class Pizza {
     }
 
 
-    public void takeOrder(String id, double total){
+    public void takeOrder(String id, double total,String ingredients){
         orderID = id;
         orderTotal = total;
+        pizzaIngredients = ingredients;
+
 
         System.out.println("Order accepted!");
 
@@ -59,6 +61,7 @@ public class Pizza {
         System.out.println("********RECEIPT********");
         System.out.println("Order ID: " + orderID);
         System.out.println("Order Total: " + orderTotal);
+        System.out.println("Pizza Ingredients: " + pizzaIngredients);
     }
 
     public String getpizzaIngredients() {
