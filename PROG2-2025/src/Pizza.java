@@ -28,7 +28,7 @@ public class Pizza {
     }
 
 
-    public void takeOrder(String id, double total,String ingredients){
+    public void takeOrder(String id, double total,String ingredients) {
         orderID = id;
         orderTotal = total;
         pizzaIngredients = ingredients;
@@ -87,5 +87,39 @@ public class Pizza {
 
     public double setorderTotal() {
         return orderTotal;
+    }
+
+    private void processCardPayment(String cardNumber,String expiryDate,int cvv) {
+        int cardLength = cardNumber.length();
+        if (cardLength == 14 ) {
+            System.out.println("Card accepted");
+        }
+            else {
+                System.out.println ("Invalid card");
+        }
+
+        int firstCardDigit = Integer.parseInt(cardNumber.substring(0,1));
+
+        String blacklistedNumber = "11111111111111";
+
+        if (cardNumber.equals(blacklistedNumber)) {
+            System.out.println("”Card is blacklisted. Please use another card");
+        }
+
+        int lastFourDigits = Integer.parseInt(cardNumber.substring(10,14));
+
+        String cardNumberToDisplay = cardNumber.charAt(0) + "*********" + cardNumber.substring(10,13);
+
+        public void specialOfTheDay( String pizzaOfTheDay,String sideOfTheDay,String specialPrice) {
+            StringBuilder specialList = new StringBuilder();
+            specialList.append(pizzaOfTheDay).append(sideOfTheDay).append(specialPrice);
+
+            System.out.println(specialList.toString());
+
+        }
+
+
+
+
     }
 }
