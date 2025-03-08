@@ -3,6 +3,7 @@ public class App {
         Pizza pizza = new Pizza();
         pizza.takeOrder(Pizza.DEF_ORDER_ID,Pizza.DEF_ORDER_TOTAL,Pizza.DEF_PIZZA_INGREDIENTS);
         pizza.specialOfTheDay("a","b","c");
+        pizza.isItYourBirthday();
         
     }
 }
